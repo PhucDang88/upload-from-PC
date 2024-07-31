@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<!--
+Các loại thẻ trong html
+
+    1. h1 - h6 - heading
+    2. p - paragraph
+    3. img - image
+    4. a - href - link trang web
+    5. ul , li  - unordered list , list
+    6. table
+    7. input - text:nhap text, checkbox, radious : chọn
+    8. button
+    9. div- tạo ra 1 khối
+    10. pre - preserver formatting : giữ định dạng cho văn bản:
+    11. hr - gạch ngang
+    12. br - xuống dòng
+    13. em or i - nghiên dòng
+    14. strong or bold - in đậm
+    15. sub - chữ nhô lên or thấp xuống.
+    15 del / ins - xóa, chèn
+    15 u / strike  - gạch dưới gạch ngang
+    15. span - tạo kiểu cho văn bản color,style...
+    16. style - thẻ chứa CSS
+    17. link - gắn link file CSS
+    18 ID và Class : id dùng khi đặt tên khác nhau, Class có thể đặt trùng tên
+    19 Attributes  - các thuộc tính trong CSS
+    19. font - size , face , color,background-color
+    20. margin, border, padding
+    21. background-image : chèn hình vào
+    22.Pseudo Class - :root, :hover, :active, first-child, last-child
+
+
+
+
+
+-->
+
+
+<htmt>
+
+    
+    <head>
+        <title>F88 Demo</title>
+        <meta charset="utf-8"> 
+
+     <!--
+            Position giup di chuyen object đè lên các element khác
+            Dùng trong các case hiện pop-up
+     -->
+        <style>
+           
+            h1
+            {
+                /* relative giup di chuyen object đè lên các element khác
+                    Lấy bản thân mình để căn chỉnh
+                    - Frame chồng lên nhau : alert
+                */
+                position: relative;
+                top: 50px;
+                right: 20px;
+                margin-top: 20px;
+                left: 10px;
+
+               
+
+            }
+            .box {
+
+                width: 100%;
+                height: 120px;
+                background-color: aqua;
+                position: relative;
+
+
+            }
+            .box-child{
+
+                width: 50px;
+                height: 50px;
+                background-color: rgb(214, 138, 39);
+                position: absolute;
+            }
+            /*
+                Position ( fixed): tạo header-top,bottom cố định khi encroll
+            */
+            .header{
+
+                width: 100%;
+                height: 40px;
+                background-color: black;
+                position: fixed;
+                left: 0px;
+                top: 0px;
+                
+
+            }
+            /*
+            Tạo ul dể trang dài ra mới có enroll 
+            */
+            ul {
+
+                height: 2000px;
+            }
+            
+
+        </style>
+        
+   
+
+    </head>
+
+    <body>
+        <div class="header"> </div>
+         
+        <h1>Position</h1>
+        <ul>
+            <li>relative</li>
+            <li>Absolute</li>
+            <li>Fixed</li>
+            <li>Sticky</li>
+        </ul>
+        <!--
+            Dối vối position:absolute là nó lấy thẻ gần nó nhất mà có tính position bạt kì,
+            làm thẻ cha, và định vị cho nó.
+            VD o đây
+                thẻ box có position
+                thẻ box-child có position:abosolute lấy box làm định vị cho mình
+        -->
+        <div class="box">
+            <div class="box-child"></div>
+
+        </div>
+
+       
+
+    </body>
+
+       
+         
+
+
+
+</htmt>
